@@ -1,30 +1,29 @@
 <?php
 
-use GeeksAreForLife\Utilities;
 
 class Arrays
 {
-	public static function sanitiseArrayList($array, $fieldlist)
-	{
-		$newArray = [];
+    public static function sanitiseArrayList($array, $fieldlist)
+    {
+        $newArray = [];
 
-		for ($i = 0; $i < count($array); $i++) {
-			$newArray[] = self::sanitiseArray($array[$i], $fieldlist);
-		}
+        for ($i = 0; $i < count($array); $i++) {
+            $newArray[] = self::sanitiseArray($array[$i], $fieldlist);
+        }
 
-		return $newArray;
-	}
+        return $newArray;
+    }
 
-	public static function sanitiseArray($array, $fieldlist)
-	{
-		$newArray = [];
+    public static function sanitiseArray($array, $fieldlist)
+    {
+        $newArray = [];
 
-		foreach ($array as $name => $value) {
-			if (in_array($name, $fieldlist)) {
-				$newArray[$name] = $array[$name];
-			}
-		}
+        foreach ($array as $name => $value) {
+            if (in_array($name, $fieldlist)) {
+                $newArray[$name] = $array[$name];
+            }
+        }
 
-		return $newArray;
-	}
+        return $newArray;
+    }
 }

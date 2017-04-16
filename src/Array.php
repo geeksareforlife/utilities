@@ -1,5 +1,6 @@
 <?php
 
+namespace GeeksAreForLife\Utilities;
 
 class Arrays
 {

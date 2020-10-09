@@ -10,20 +10,20 @@ namespace GeeksAreForLife\Utilities;
 class Arrays
 {
     /**
-     * Takes an array of associative arraya and returns a new array or arrays
+     * Takes an array of associative arrays and returns a new array or arrays
      * each with only the fields provided in the field list.
      *
-     * @param array $array     The input array
+     * @param array $arraylist The input array
      * @param array $fieldlist a list of fields to keep
      *
      * @return array the output array
      */
-    public static function sanitiseArrayList($array, $fieldlist)
+    public static function sanitiseArrayList($arraylist, $fieldlist)
     {
         $newArray = [];
 
-        for ($i = 0; $i < count($array); $i++) {
-            $newArray[] = self::sanitiseArray($array[$i], $fieldlist);
+        foreach ($arraylist as $array) {
+            $newArray[] = self::sanitiseArray($array, $fieldlist);
         }
 
         return $newArray;

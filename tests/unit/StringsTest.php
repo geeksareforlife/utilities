@@ -14,6 +14,7 @@ class StringsTest extends TestCase
             'Multiple Characters'   => ['the quick brown fox', 'the'],
             'With Spaces'           => ['the quick brown fox', 'the qui'],
             'Special Character'     => ["\nthe quick brown fox", "\nthe"],
+            'Nothing'               => ['the quick brown fox', ''],
         ];
     }
 

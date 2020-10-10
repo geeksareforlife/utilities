@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
 use GeeksAreForLife\Utilities\Strings;
+use PHPUnit\Framework\TestCase;
 
 class StringsTest extends TestCase
 {

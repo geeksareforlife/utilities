@@ -23,4 +23,6 @@
         <exclude-pattern>*/tests/*</exclude-pattern>
     </rule>
 
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
+
 </ruleset>

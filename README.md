@@ -41,10 +41,39 @@ $newArray = Arrays::sanitiseArray($array, $keys);
 This function takes two arguments - the array you want to sanitise and a list of keys you want
 in the returned array.
 
+For example, given this as an input array:
+
+```
+$array = [
+  'red'   => 'abc',
+  'green' => true,
+  'blue'  => [1, 2, 3],
+  ];
+```
+
+and the following as the list of keys:
+
+```
+$keys = ['red', 'blue', 'yellow'];
+```
+
+The returned array will be:
+
+```
+$array = [
+  'red'   => 'abc',
+  'blue'  => [1, 2, 3],
+  ];
+```
+
+Notice that `yellow` does not appear as a key.
+
 ### Arrays::sanitiseArrayList($list, $keys)
 
 This function takes the provided list of arrays and sanitises each one before returning a list
 of the sanitised arrays.
+
+The individual arrays are santised in exactly the same way as noted in the previous function.
 
 ### Strings::startsWith($string, $startsWith)
 

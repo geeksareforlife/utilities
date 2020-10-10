@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
 use GeeksAreForLife\Utilities\Arrays;
+use PHPUnit\Framework\TestCase;
 
 class ArraysTest extends TestCase
 {
